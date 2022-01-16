@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" name="MagnificentServiceMonitor" packages="">
+    <Appenders>
+        <RollingFile name="MagnificentAppender" fileName="log/magnificent.log"
+                     filePattern="log/magnificent-%d{MM-dd-yyyy}-%i.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5p - [%c{1}]:%m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+        <RollingFile name="DefaultAppender" fileName="log/server.log" filePattern="log/server-%d{MM-dd-yyyy}-%i.log"
+                     append="true">
+            <PatternLayout>
+                <Pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5p - [%c{1}]:%m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="MagnificentMonitor" level="debug">
+            <AppenderRef ref="MagnificentAppender"/>
+        </Logger>
+        <Root name="Default" level="info">
+            <AppenderRef ref="DefaultAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
