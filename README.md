@@ -13,8 +13,8 @@ Unhealthy: WARN, Unavailable: ERROR).
 You can build this application using the next command:
 <p><strong>mvn clean package</strong></p>
 
-As a result of the program execution, a file will be generated:
-<p><strong>target/magnificent-service-monitor-VERSION.jar</strong></p>
+As a result of the program execution, an executable jar will be generated:
+<p><strong>target/magnificent-service-monitor-VERSION-jar-with-dependencies.jar</strong></p>
 
 ### Run
 
