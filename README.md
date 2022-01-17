@@ -35,3 +35,11 @@ monitoring.server.port=12345
 monitoring.server.schedule.fixed.rate=10000
 monitoring.server.connection.timeout=5000
 
+### Starting test server
+
+Install Python. Python2 and Python3 both work.
+pip install twisted
+python server.py
+Okay, now you're running magnificent!
+Visit http://localhost:12345 in a web browser or something.
+It should throw a verbose error, or return "Magnificent!".
